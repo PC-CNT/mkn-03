@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブックマークレット一覧</title>
+
+    <style>
+        p {
+            font-size: medium;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <a href="javascript: (()=>{if (location.hostname.match(/play\.google\.com/)){window.open(`https://apps.evozi.com/apk-downloader/?id=${location.href.match(/id=([^&]+)/)[1]}`)}})()">APK Downloader</a>
+    </p>
+    <p>
+        <a href="javascript: window.open('http://servermobile.net/index.php?_kzm_u=%27+document.location);">KZ BRAIN Mobile</a>
+    </p>
+    <p>
+        <a href="javascript:location='steam://openurl/'+location">Steamで開く</a>
+    </p>
+</body>
+
+</html>
