@@ -8,25 +8,55 @@
     <title>ブックマークレット一覧</title>
 
     <style>
+        body {
+            padding-left: 2vw;
+            padding-right: 2vw;
+        }
         p {
             font-size: medium;
+        }
+        .block {
+            padding: 8px;
+            margin-bottom: 2vh;
+            border: 2px solid;
         }
     </style>
 </head>
 
 <body>
-    <p>
-        <a href="javascript: (()=>{if (location.hostname.match(/play\.google\.com/)){window.open(`https://apps.evozi.com/apk-downloader/?id=${location.href.match(/id=([^&]+)/)[1]}`)}})()">APK Downloader</a>
-    </p>
-    <p>
-        <a href="javascript: window.open('http://servermobile.net/index.php?_kzm_u=%27+document.location);">KZ BRAIN Mobile</a>
-    </p>
-    <p>
-        <a href="javascript:location='steam://openurl/'+location">Steamで開く</a>
-    </p>
-    <p>
-        <a href="javascript: window.open('https://gw.aguse.jp/?aguse_url=%27+document.location);">aguse Gateway</a>
-    </p>
+    <h1>各リンクをブックマークバーにドラッグアンドドロップするだけで実行できます</h1>
+
+    <div class="block">
+        <h3>Google PlayのアプリをAPK Downloaderに入力した状態で開く</h3>
+        <p>
+            <a href="javascript: (()=>{if (location.hostname.match(/play\.google\.com/)){window.open(`https://apps.evozi.com/apk-downloader/?id=${location.href.match(/id=([^&]+)/)[1]}`)}})()">APK Downloader</a>
+        </p>
+        <code>javascript: (()=>{if (location.hostname.match(/play\.google\.com/)){window.open(`https://apps.evozi.com/apk-downloader/?id=${location.href.match(/id=([^&]+)/)[1]}`)}})()</code>
+    </div>
+
+    <div class="block">
+        <h3>開いているページをKZ BRAIN Mobileを通して開く</h3>
+        <p>
+            <a href="javascript: window.open('http://servermobile.net/index.php?_kzm_u=%27+document.location);">KZ BRAIN Mobile</a>
+        </p>
+        <code>javascript: window.open('http://servermobile.net/index.php?_kzm_u=%27+document.location);</code>
+    </div>
+
+    <div class="block">
+        <h3>開いているページをSteamデスクトップアプリで開く（store.steampowered.comとsteamcommunity.comのみ有効）</h3>
+        <p>
+            <a href="javascript:location='steam://openurl/'+location">Steamで開く</a>
+        </p>
+        <code>javascript:location='steam://openurl/'+location</code>
+    </div>
+
+    <div class="block">
+        <h3>開いているページをaguse Gatewayを通して開く</h3>
+        <p>
+            <a href="javascript: window.open('https://gw.aguse.jp/?aguse_url=%27+document.location);">aguse Gateway</a>
+        </p>
+        <code>javascript: window.open('https://gw.aguse.jp/?aguse_url=%27+document.location);</code>
+    </div>
 </body>
 
 </html>
