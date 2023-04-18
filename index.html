@@ -45,9 +45,9 @@
     <div class="block">
         <h3>開いているページをSteamデスクトップアプリで開く（store.steampowered.comとsteamcommunity.comのみ有効）</h3>
         <p>
-            <a href="javascript:location='steam://openurl/'+location">Steamで開く</a>
+            <a href="javascript: location='steam://openurl/'+location">Steamで開く</a>
         </p>
-        <code>javascript:location='steam://openurl/'+location</code>
+        <code>javascript: location='steam://openurl/'+location</code>
     </div>
 
     <div class="block">
@@ -56,6 +56,14 @@
             <a href="javascript: window.open('https://gw.aguse.jp/?aguse_url=%27+document.location);">aguse Gateway</a>
         </p>
         <code>javascript: window.open('https://gw.aguse.jp/?aguse_url=%27+document.location);</code>
+    </div>
+
+    <div class="block">
+        <h3>開いているページ全体を編集可能にする</h3>
+        <p>
+            <a href="javascript: document.body.contentEditable = true">ContentEditable</a>
+        </p>
+        <code>javascript: document.body.contentEditable = true</code>
     </div>
 </body>
 
