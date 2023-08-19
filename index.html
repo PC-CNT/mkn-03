@@ -12,9 +12,16 @@
             padding-left: 2vw;
             padding-right: 2vw;
         }
+
         p {
             font-size: medium;
         }
+
+        pre {
+            overflow: auto;
+            white-space: pre;
+        }
+
         .block {
             padding: 8px;
             margin-bottom: 2vh;
@@ -31,7 +38,9 @@
         <p>
             <a href="javascript: (()=>{if (location.hostname.match(/play\.google\.com/)){window.open(`https://apps.evozi.com/apk-downloader/?id=${location.href.match(/id=([^&]+)/)[1]}`)}})()">APK Downloader</a>
         </p>
-        <code>javascript: (()=>{if (location.hostname.match(/play\.google\.com/)){window.open(`https://apps.evozi.com/apk-downloader/?id=${location.href.match(/id=([^&]+)/)[1]}`)}})()</code>
+        <pre>
+            <code>javascript: (()=>{if (location.hostname.match(/play\.google\.com/)){window.open(`https://apps.evozi.com/apk-downloader/?id=${location.href.match(/id=([^&]+)/)[1]}`)}})()</code>
+        </pre>
     </div>
 
     <div class="block">
@@ -39,7 +48,9 @@
         <p>
             <a href="javascript: window.open('http://servermobile.net/index.php?_kzm_u=%27+document.location);">KZ BRAIN Mobile</a>
         </p>
-        <code>javascript: window.open('http://servermobile.net/index.php?_kzm_u=%27+document.location);</code>
+        <pre>
+            <code>javascript: window.open('http://servermobile.net/index.php?_kzm_u=%27+document.location);</code>
+        </pre>
     </div>
 
     <div class="block">
@@ -47,7 +58,9 @@
         <p>
             <a href="javascript: location='steam://openurl/'+location">Steamで開く</a>
         </p>
-        <code>javascript: location='steam://openurl/'+location</code>
+        <pre>
+            <code>javascript: location='steam://openurl/'+location</code>
+        </pre>
     </div>
 
     <div class="block">
@@ -55,7 +68,9 @@
         <p>
             <a href="javascript: window.open('https://gw.aguse.jp/?aguse_url=%27+document.location);">aguse Gateway</a>
         </p>
-        <code>javascript: window.open('https://gw.aguse.jp/?aguse_url=%27+document.location);</code>
+        <pre>
+            <code>javascript: window.open('https://gw.aguse.jp/?aguse_url=%27+document.location);</code>
+        </pre>
     </div>
 
     <div class="block">
@@ -63,7 +78,19 @@
         <p>
             <a href="javascript: document.body.contentEditable = true">ContentEditable</a>
         </p>
-        <code>javascript: document.body.contentEditable = true</code>
+        <pre>
+            <code>javascript: document.body.contentEditable = true</code>
+        </pre>
+    </div>
+
+    <div class="block">
+        <h3>ニコニコ動画 ⇔ ニコニコチャート 相互移動（一部ページで動かない）</h3>
+        <p>
+            <a href="javascript:void%20function(){location.href.match(/^https%3F:\/\/(www|sp)\.nicovideo\.jp/)%26%26(location.href=location.href.replace(/(\%3F.*)$/,%22%22).replace(/^(https%3F:\/\/(www|sp)\.nicovideo\.jp)/,%22http://www.nicochart.jp%22)),location.href.match(/^http:\/\/www\.nicochart\.jp/)%26%26(location.href=location.href.replace(/^(http:\/\/www\.nicochart\.jp)/,%22https://www.nicovideo.jp%22))}();">ニコ動⇔ニコチャ</a>
+        </p>
+        <pre>
+            <code>javascript: void function(){location.href.match(/^https?:\/\/(www|sp)\.nicovideo\.jp/)&&(location.href=location.href.replace(/(\?.*)$/,"").replace(/^(https?:\/\/(www|sp)\.nicovideo\.jp)/,"http://www.nicochart.jp")),location.href.match(/^http:\/\/www\.nicochart\.jp/)&&(location.href=location.href.replace(/^(http:\/\/www\.nicochart\.jp)/,"https://www.nicovideo.jp"))}();</code>
+        </pre>
     </div>
 </body>
 
