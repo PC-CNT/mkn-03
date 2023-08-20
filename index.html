@@ -19,7 +19,7 @@
 
         pre {
             overflow: auto;
-            white-space: pre;
+            white-space: pre-line;
         }
 
         .block {
@@ -90,6 +90,16 @@
         </p>
         <pre>
             <code>javascript: void function(){location.href.match(/^https?:\/\/(www|sp)\.nicovideo\.jp/)&&(location.href=location.href.replace(/(\?.*)$/,"").replace(/^(https?:\/\/(www|sp)\.nicovideo\.jp)/,"http://www.nicochart.jp")),location.href.match(/^http:\/\/www\.nicochart\.jp/)&&(location.href=location.href.replace(/^(http:\/\/www\.nicochart\.jp)/,"https://www.nicovideo.jp"))}();</code>
+        </pre>
+    </div>
+
+    <div class="block">
+        <h3>開いているページをarchive.todayで保存</h3>
+        <p>
+            <a href="javascript:void(open('http://archive.today/?run=1&url=%27+encodeURIComponent(document.location)))">archive.today</a>
+        </p>
+        <pre>
+            <code>javascript:void(open('http://archive.today/?run=1&url=%27+encodeURIComponent(document.location)))</code>
         </pre>
     </div>
 </body>
