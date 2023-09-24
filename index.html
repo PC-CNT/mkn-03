@@ -102,6 +102,16 @@
             <code>javascript:void(open('http://archive.today/?run=1&url=%27+encodeURIComponent(document.location)))</code>
         </pre>
     </div>
+
+    <div class="block">
+        <h3>itch.ioの検索結果からタイトルとURLをtsv形式でコピーする</h3>
+        <p>
+            <a href="javascript:(function()%7Blet%20o%20%3D%20%22%22%3B%0A%5B...document.querySelector(%60%5Bid%3D%22game_grid_0%22%5D%60).querySelectorAll(%60%5Bclass%3D%22game_title%22%5D%20%3E%20a%60)%5D.forEach((l)%20%3D%3E%20%7B%0A%20%20%20%20o%20%2B%3D%20%60%24%7Bl.textContent%7D%5Ct%24%7Bl.href%7D%5Cn%60%0A%7D)%3B%0Anavigator.clipboard.writeText(o)%3B%7D)()%3B">itch.io tsv</a>
+        </p>
+        <pre>
+            <code>javascript:void(let o = "";[...document.querySelector(`[id="game_grid_0"]`).querySelectorAll(`[class="game_title"] > a`)].forEach((l) => {    o += `${l.textContent}\t${l.href}\n`});navigator.clipboard.writeText(o);)</code>
+        </pre>
+    </div>
 </body>
 
 </html>
