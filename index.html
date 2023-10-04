@@ -112,6 +112,16 @@
             <code>javascript:void(let o = "";[...document.querySelector(`[id="game_grid_0"]`).querySelectorAll(`[class="game_title"] > a`)].forEach((l) => {    o += `${l.textContent}\t${l.href}\n`});navigator.clipboard.writeText(o);)</code>
         </pre>
     </div>
+
+    <div class="block">
+        <h3>Discordの鯖招待リンクからToolscordに飛ぶ</h3>
+        <p>
+            <a href="javascript:void%20function(){var%20o;(o=location.href.match(/^https:\/\/discord\.com\/invite\/(\w+)/)[1])%26%26open(%22https://toolscord.com/invite%23%22+o)}();">Discord→Invite Info</a>
+        </p>
+        <pre>
+            <code>var o; if (o = location.href.match(/^https:\/\/discord\.com\/invite\/(\w+)/)[1]) { open('https://toolscord.com/invite#' + o);};</code>
+        </pre>
+    </div>
 </body>
 
 </html>
