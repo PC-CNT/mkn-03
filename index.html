@@ -39,7 +39,7 @@
             <a href="javascript: (()=>{if (location.hostname.match(/play\.google\.com/)){window.open(`https://apps.evozi.com/apk-downloader/?id=${location.href.match(/id=([^&]+)/)[1]}`)}})()">APK Downloader</a>
         </p>
         <pre>
-            <code>javascript: (()=>{if (location.hostname.match(/play\.google\.com/)){window.open(`https://apps.evozi.com/apk-downloader/?id=${location.href.match(/id=([^&]+)/)[1]}`)}})()</code>
+            <code>if (location.hostname.match(/play\.google\.com/)){window.open(`https://apps.evozi.com/apk-downloader/?id=${location.href.match(/id=([^&]+)/)[1]}`)}</code>
         </pre>
     </div>
 
@@ -49,7 +49,7 @@
             <a href="javascript: window.open('http://servermobile.net/index.php?_kzm_u=%27+document.location);">KZ BRAIN Mobile</a>
         </p>
         <pre>
-            <code>javascript: window.open('http://servermobile.net/index.php?_kzm_u=%27+document.location);</code>
+            <code>window.open('http://servermobile.net/index.php?_kzm_u=%27+document.location);</code>
         </pre>
     </div>
 
@@ -59,7 +59,7 @@
             <a href="javascript: location='steam://openurl/'+location">Steamで開く</a>
         </p>
         <pre>
-            <code>javascript: location='steam://openurl/'+location</code>
+            <code>location='steam://openurl/'+location</code>
         </pre>
     </div>
 
@@ -69,7 +69,7 @@
             <a href="javascript: window.open('https://gw.aguse.jp/?aguse_url=%27+document.location);">aguse Gateway</a>
         </p>
         <pre>
-            <code>javascript: window.open('https://gw.aguse.jp/?aguse_url=%27+document.location);</code>
+            <code>window.open('https://gw.aguse.jp/?aguse_url=%27+document.location);</code>
         </pre>
     </div>
 
@@ -79,7 +79,7 @@
             <a href="javascript: document.body.contentEditable = true">ContentEditable</a>
         </p>
         <pre>
-            <code>javascript: document.body.contentEditable = true</code>
+            <code>document.body.contentEditable = true</code>
         </pre>
     </div>
 
@@ -89,7 +89,7 @@
             <a href="javascript:void%20function(){location.href.match(/^https%3F:\/\/(www|sp)\.nicovideo\.jp/)%26%26(location.href=location.href.replace(/(\%3F.*)$/,%22%22).replace(/^(https%3F:\/\/(www|sp)\.nicovideo\.jp)/,%22http://www.nicochart.jp%22)),location.href.match(/^http:\/\/www\.nicochart\.jp/)%26%26(location.href=location.href.replace(/^(http:\/\/www\.nicochart\.jp)/,%22https://www.nicovideo.jp%22))}();">ニコ動⇔ニコチャ</a>
         </p>
         <pre>
-            <code>javascript: void function(){location.href.match(/^https?:\/\/(www|sp)\.nicovideo\.jp/)&&(location.href=location.href.replace(/(\?.*)$/,"").replace(/^(https?:\/\/(www|sp)\.nicovideo\.jp)/,"http://www.nicochart.jp")),location.href.match(/^http:\/\/www\.nicochart\.jp/)&&(location.href=location.href.replace(/^(http:\/\/www\.nicochart\.jp)/,"https://www.nicovideo.jp"))}();</code>
+            <code>location.href.match(/^https?:\/\/(www|sp)\.nicovideo\.jp/)&&(location.href=location.href.replace(/(\?.*)$/,"").replace(/^(https?:\/\/(www|sp)\.nicovideo\.jp)/,"http://www.nicochart.jp")),location.href.match(/^http:\/\/www\.nicochart\.jp/)&&(location.href=location.href.replace(/^(http:\/\/www\.nicochart\.jp)/,"https://www.nicovideo.jp"))</code>
         </pre>
     </div>
 
@@ -99,7 +99,7 @@
             <a href="javascript:void(open('http://archive.today/?run=1&url=%27+encodeURIComponent(document.location)))">archive.today</a>
         </p>
         <pre>
-            <code>javascript:void(open('http://archive.today/?run=1&url=%27+encodeURIComponent(document.location)))</code>
+            <code>open('http://archive.today/?run=1&url=%27+encodeURIComponent(document.location))</code>
         </pre>
     </div>
 
@@ -109,7 +109,7 @@
             <a href="javascript:(function()%7Blet%20o%20%3D%20%22%22%3B%0A%5B...document.querySelector(%60%5Bid%3D%22game_grid_0%22%5D%60).querySelectorAll(%60%5Bclass%3D%22game_title%22%5D%20%3E%20a%60)%5D.forEach((l)%20%3D%3E%20%7B%0A%20%20%20%20o%20%2B%3D%20%60%24%7Bl.textContent%7D%5Ct%24%7Bl.href%7D%5Cn%60%0A%7D)%3B%0Anavigator.clipboard.writeText(o)%3B%7D)()%3B">itch.io tsv</a>
         </p>
         <pre>
-            <code>javascript:void(let o = "";[...document.querySelector(`[id="game_grid_0"]`).querySelectorAll(`[class="game_title"] > a`)].forEach((l) => {    o += `${l.textContent}\t${l.href}\n`});navigator.clipboard.writeText(o);)</code>
+            <code>let o = "";[...document.querySelector(`[id="game_grid_0"]`).querySelectorAll(`[class="game_title"] > a`)].forEach((l) => {    o += `${l.textContent}\t${l.href}\n`});navigator.clipboard.writeText(o);</code>
         </pre>
     </div>
 
