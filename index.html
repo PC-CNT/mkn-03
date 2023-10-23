@@ -122,6 +122,16 @@
             <code>var o; if (o = location.href.match(/^https:\/\/discord\.com\/invite\/(\w+)/)[1]) { open('https://toolscord.com/invite#' + o);};</code>
         </pre>
     </div>
+
+    <div class="block">
+        <h3>開いているページを12ft.io（paywall bypass用サイト）を通して開く</h3>
+        <p>
+            <a href="javascript:void%20function(){window.open(%22https://12ft.io/proxy%3Fq=%22+encodeURIComponent(location.href))}();">12ft.io</a>
+        </p>
+        <pre>
+            <code>window.open("https://12ft.io/proxy?q=" + encodeURIComponent(location.href));</code>
+        </pre>
+    </div>
 </body>
 
 </html>
