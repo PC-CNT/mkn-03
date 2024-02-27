@@ -142,6 +142,16 @@
             <code>window.open("https://minhaskamal.github.io/DownGit/#/home?url=" + encodeURIComponent(location.href));</code>
         </pre>
     </div>
+
+    <div class="block">
+        <h3>ニコニコ動画 ⇔ ニコログ 相互移動（一部ページで動かない）</h3>
+        <p>
+            <a href="javascript:void%20function(){location.href.match(/^https%3F:\/\/(www|sp)\.nicovideo\.jp/)%26%26(location.href=location.href.replace(/(\%3F.*)$/,%22%22).replace(/^(https%3F:\/\/(www|sp)\.nicovideo\.jp)/,%22https://www.nicolog.jp%22)),location.href.match(/^https%3F:\/\/www\.nicolog\.jp/)%26%26(location.href=location.href.replace(/^(https%3F:\/\/www\.nicolog\.jp)/,%22https://www.nicovideo.jp%22))}();">ニコ動⇔ニコログ</a>
+        </p>
+        <pre>
+            <code>location.href.match(/^https?:\/\/(www|sp)\.nicovideo\.jp/)&&(location.href=location.href.replace(/(\?.*)$/,"").replace(/^(https?:\/\/(www|sp)\.nicovideo\.jp)/,"https://www.nicolog.jp")),location.href.match(/^http:\/\/www\.nicochart\.jp/)&&(location.href=location.href.replace(/^(http:\/\/www\.nicochart\.jp)/,"https://www.nicovideo.jp"))</code>
+        </pre>
+    </div>
 </body>
 
 </html>
