@@ -152,6 +152,16 @@
             <code>location.href.match(/^https?:\/\/(www|sp)\.nicovideo\.jp/)&&(location.href=location.href.replace(/(\?.*)$/,"").replace(/^(https?:\/\/(www|sp)\.nicovideo\.jp)/,"https://www.nicolog.jp")),location.href.match(/^http:\/\/www\.nicochart\.jp/)&&(location.href=location.href.replace(/^(http:\/\/www\.nicochart\.jp)/,"https://www.nicovideo.jp"))</code>
         </pre>
     </div>
+
+    <div class="block">
+        <h3>開いているページをウェブ魚拓（gyo.tc）で開く</h3>
+        <p>
+            <a href="javascript:void%20function(){window.open(%22https://gyo.tc/%22+location.href)}();">ウェブ魚拓</a>
+        </p>
+        <pre>
+            <code>window.open("https://gyo.tc/" + location.href)</code>
+        </pre>
+    </div>
 </body>
 
 </html>
