@@ -173,7 +173,36 @@
             <a href="javascript:void%20function(){location.href.match(/^https%3F:\/\/b\.hatena\.ne\.jp\/entry\/s\//)%3Flocation.href=location.href.replace(/^https%3F:\/\/b\.hatena\.ne\.jp\/entry\/s\//,%22https://%22):location.href.match(/^https%3F:\/\/b\.hatena\.ne\.jp\/entry\//)%3Flocation.href=location.href.replace(/^https%3F:\/\/b\.hatena\.ne\.jp\/entry\//,%22http://%22):location.href.match(/^https%3F:\/\/b\.hatena\.ne\.jp\/site\//)%3Flocation.href=decodeURIComponent(location.href.replace(/^https%3F:\/\/b\.hatena\.ne\.jp\/site\/.+%23bookmark_url=/,%22%22)):location.href.match(/^https:\/\//)%3Flocation.href=location.href.replace(/^https:\/\//,%22https://b.hatena.ne.jp/entry/s/%22):location.href.match(/^http:\/\//)%26%26(location.href=location.href.replace(/^http:\/\//,%22https://b.hatena.ne.jp/entry/%22))}();">はてブ</a>
         </p>
         <pre>
-            <code>if (location.href.match(/^https?:\/\/b\.hatena\.ne\.jp\/entry\/s\//)) { location.href = location.href.replace(/^https?:\/\/b\.hatena\.ne\.jp\/entry\/s\//, "https://") } else if (location.href.match(/^https?:\/\/b\.hatena\.ne\.jp\/entry\//)) { location.href = location.href.replace(/^https?:\/\/b\.hatena\.ne\.jp\/entry\//, "http://") } else if (location.href.match(/^https?:\/\/b\.hatena\.ne\.jp\/site\//)) { location.href = decodeURIComponent(location.href.replace(/^https?:\/\/b\.hatena\.ne\.jp\/site\/.+#bookmark_url=/, "")) } else if (location.href.match(/^https:\/\//)) { location.href = location.href.replace(/^https:\/\//, "https://b.hatena.ne.jp/entry/s/") } else if (location.href.match(/^http:\/\//)) { location.href = location.href.replace(/^http:\/\//, "https://b.hatena.ne.jp/entry/") }</code>
+            <code>if (location.href.match(/^https?:\/\/b\.hatena\.ne\.jp\/entry\/s\//)) {
+                location.href = location.href.replace(/^https?:\/\/b\.hatena\.ne\.jp\/entry\/s\//, "https://")
+            }
+            else if (location.href.match(/^https?:\/\/b\.hatena\.ne\.jp\/entry\//)) {
+                location.href = location.href.replace(/^https?:\/\/b\.hatena\.ne\.jp\/entry\//, "http://")
+            }
+            else if (location.href.match(/^https?:\/\/b\.hatena\.ne\.jp\/site\//)) {
+                location.href = decodeURIComponent(location.href.replace(/^https?:\/\/b\.hatena\.ne\.jp\/site\/.+#bookmark_url=/, ""))
+            }
+            else if (location.href.match(/^https:\/\//)) {
+                location.href = location.href.replace(/^https:\/\//, "https://b.hatena.ne.jp/entry/s/")
+            }
+            else if (location.href.match(/^http:\/\//)) {
+                location.href = location.href.replace(/^http:\/\//, "https://b.hatena.ne.jp/entry/")
+            }</code>
+        </pre>
+    </div>
+
+    <div class="block">
+        <h3>5ch.net ⇔ 2ch.sc 相互移動</h3>
+        <p>
+            <a href="javascript:void%20function(){location.href.match(/^https%3F:\/\/\w+\.5ch\.net/)%3Flocation.href=location.href.replace(/^(https%3F:\/\/\w+)\.5ch\.net\/(%3F:\w+\/)%3F(test\/read\.cgi\/\w+\/[0-9]+)(\/.+)%3F/,%22$1.2ch.sc/$2%22):location.href.match(/^https%3F:\/\/\w+\.2ch\.sc/)%26%26(location.href=location.href.replace(/^(https%3F:\/\/)\w+\.2ch\.sc\/(test\/read\.cgi\/\w+\/[0-9]+)(\/.+)%3F/,%22https://itest.5ch.net/$2%3Fv=pc%22))}();">5ch.net⇔2ch.sc</a>
+        </p>
+        <pre>
+            <code>if (location.href.match(/^https?:\/\/\w+\.5ch\.net/)) {
+                location.href = location.href.replace(/^(https?:\/\/\w+)\.5ch\.net\/(?:\w+\/)?(test\/read\.cgi\/\w+\/[0-9]+)(\/.+)?/, "$1.2ch.sc/$2")
+            }
+            else if (location.href.match(/^https?:\/\/\w+\.2ch\.sc/)) {
+                location.href = location.href.replace(/^(https?:\/\/)\w+\.2ch\.sc\/(test\/read\.cgi\/\w+\/[0-9]+)(\/.+)?/, "https://itest.5ch.net/$2?v=pc")
+            }</code>
         </pre>
     </div>
 </body>
