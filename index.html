@@ -90,10 +90,10 @@
     <div class="block">
         <h3>ニコニコ動画 ⇔ ニコニコチャート 相互移動（一部ページで動かない）</h3>
         <p>
-            <a href="javascript:void%20function(){location.href.match(/^https%3F:\/\/(www|sp)\.nicovideo\.jp/)%26%26(location.href=location.href.replace(/(\%3F.*)$/,%22%22).replace(/^(https%3F:\/\/(www|sp)\.nicovideo\.jp)/,%22http://www.nicochart.jp%22)),location.href.match(/^http:\/\/www\.nicochart\.jp/)%26%26(location.href=location.href.replace(/^(http:\/\/www\.nicochart\.jp)/,%22https://www.nicovideo.jp%22))}();">ニコ動⇔ニコチャ</a>
+            <a href="javascript:void%20function(){location.href.match(/^https%3F:\/\/(www|sp|embed)\.nicovideo\.jp/)%26%26(location.href=location.href.replace(/(\%3F.*)$/,%22%22).replace(/^(https%3F:\/\/(www|sp|embed)\.nicovideo\.jp)/,%22http://www.nicochart.jp%22)),location.href.match(/^http:\/\/www\.nicochart\.jp/)%26%26(location.href=location.href.replace(/^(http:\/\/www\.nicochart\.jp)/,%22https://www.nicovideo.jp%22))}();">ニコ動⇔ニコチャ</a>
         </p>
         <pre>
-            <code>location.href.match(/^https?:\/\/(www|sp)\.nicovideo\.jp/)&&(location.href=location.href.replace(/(\?.*)$/,"").replace(/^(https?:\/\/(www|sp)\.nicovideo\.jp)/,"http://www.nicochart.jp")),location.href.match(/^http:\/\/www\.nicochart\.jp/)&&(location.href=location.href.replace(/^(http:\/\/www\.nicochart\.jp)/,"https://www.nicovideo.jp"))</code>
+            <code>location.href.match(/^https?:\/\/(www|sp|embed)\.nicovideo\.jp/)&&(location.href=location.href.replace(/(\?.*)$/,"").replace(/^(https?:\/\/(www|sp|embed)\.nicovideo\.jp)/,"http://www.nicochart.jp")),location.href.match(/^http:\/\/www\.nicochart\.jp/)&&(location.href=location.href.replace(/^(http:\/\/www\.nicochart\.jp)/,"https://www.nicovideo.jp"))</code>
         </pre>
     </div>
 
